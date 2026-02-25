@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivors\\VampireSurvivorsCloneCMake\\",
+  "WorkspaceRootPath": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivors\\VampireSurvivorsCloneCMake\\CMakePresets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakePresets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivors\\VampireSurvivorsCloneCMake\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivors\\VampireSurvivorsCloneCMake\\VampireSurvivorsCloneCMake.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VampireSurvivorsCloneCMake.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivors\\VampireSurvivorsCloneCMake\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\CMakePresets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakePresets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\VampireSurvivorsCloneCMake.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VampireSurvivorsCloneCMake.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,12 +35,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\main.cpp",
+              "RelativeDocumentMoniker": "src\\main.cpp",
+              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\main.cpp",
+              "RelativeToolTip": "src\\main.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-23T10:27:05.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CMakePresets.json",
-              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivors\\VampireSurvivorsCloneCMake\\CMakePresets.json",
+              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\CMakePresets.json",
               "RelativeDocumentMoniker": "CMakePresets.json",
-              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivors\\VampireSurvivorsCloneCMake\\CMakePresets.json",
+              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\CMakePresets.json",
               "RelativeToolTip": "CMakePresets.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-02-23T09:41:58.238Z",
               "EditorCaption": ""
@@ -45,40 +62,36 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "CMakeLists.txt",
-              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivors\\VampireSurvivorsCloneCMake\\CMakeLists.txt",
+              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\CMakeLists.txt",
               "RelativeDocumentMoniker": "CMakeLists.txt",
-              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivors\\VampireSurvivorsCloneCMake\\CMakeLists.txt",
+              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\CMakeLists.txt",
               "RelativeToolTip": "CMakeLists.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwB8AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2026-02-23T09:41:56.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "VampireSurvivorsCloneCMake.h",
-              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivors\\VampireSurvivorsCloneCMake\\VampireSurvivorsCloneCMake.h",
+              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\VampireSurvivorsCloneCMake.h",
               "RelativeDocumentMoniker": "VampireSurvivorsCloneCMake.h",
-              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivors\\VampireSurvivorsCloneCMake\\VampireSurvivorsCloneCMake.h",
+              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\VampireSurvivorsCloneCMake.h",
               "RelativeToolTip": "VampireSurvivorsCloneCMake.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-02-23T09:41:55.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-23T09:41:55.391Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivors\\VampireSurvivorsCloneCMake\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivors\\VampireSurvivorsCloneCMake\\main.cpp",
+              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-02-23T09:41:39.123Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-23T09:41:39.123Z"
             }
           ]
         }
