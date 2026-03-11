@@ -37,7 +37,9 @@ void Enemy::Draw() const
 
 // FastEnemy
 FastEnemy::FastEnemy(float x, float y)
-    : Enemy(x, y, 150.0f) {
+    : Enemy(x, y, 150.0f) 
+{
+    health = 2;
 }
 
 void FastEnemy::Draw() const
@@ -50,6 +52,7 @@ TankEnemy::TankEnemy(float x, float y)
     : Enemy(x, y, 50.0f) 
 {
     radius = 25.0f;
+    health = 5;
 }
 
 void TankEnemy::Draw() const
@@ -73,4 +76,14 @@ bool Enemy::IsAlive() const
 void Enemy::Destroy()
 {
     alive = false;
+}
+
+void Enemy::TakeDamage(int damage)
+{
+    health -= damage;
+
+    if (health <= 0)
+    {
+        alive = false;
+    }
 }

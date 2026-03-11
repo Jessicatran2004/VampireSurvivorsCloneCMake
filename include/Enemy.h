@@ -15,12 +15,14 @@ public:
 
     bool IsAlive() const;
     void Destroy();
+    void TakeDamage(int damage);
 
 protected:
     Vector2 position;
     float speed;
     float radius;
 
+    int health = 1;
     bool alive = true;
 };
 

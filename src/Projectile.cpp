@@ -1,11 +1,10 @@
 #include "Projectile.h"
 
-Projectile::Projectile(Vector2 startPos, Vector2 direction)
+Projectile::Projectile(Vector2 startPos, Vector2 direction, int dmg)
 {
     position = startPos;
-
-    velocity.x = direction.x * speed;
-    velocity.y = direction.y * speed;
+    velocity = { direction.x * speed, direction.y * speed };
+    damage = dmg;
 }
 
 void Projectile::Update(float dt)
@@ -37,4 +36,9 @@ bool Projectile::IsAlive() const
 void Projectile::Destroy()
 {
     alive = false;
+}
+
+int Projectile::GetDamage() const
+{
+    return damage;
 }

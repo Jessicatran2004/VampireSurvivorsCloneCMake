@@ -50,11 +50,34 @@ void GameManager::Update(float dt)
     {
         spawnTimer = 0.0f;
 
+        int side = GetRandomValue(0, 3);
+
+        float x;
+        float y;
+
+        if (side == 0) // left
+        {
+            x = 0;
+            y = GetRandomValue(0, screenHeight);
+        }
+        else if (side == 1) // right
+        {
+            x = screenWidth;
+            y = GetRandomValue(0, screenHeight);
+        }
+        else if (side == 2) // top
+        {
+            x = GetRandomValue(0, screenWidth);
+            y = 0;
+        }
+        else // bottom
+        {
+            x = GetRandomValue(0, screenWidth);
+            y = screenHeight;
+        }
+
         enemies.push_back(
-            std::make_unique<FastEnemy>(
-                (float)GetRandomValue(0, screenWidth),
-                (float)GetRandomValue(0, screenHeight)
-            )
+            std::make_unique<FastEnemy>(x, y)
         );
     }
 
@@ -88,10 +111,18 @@ void GameManager::Update(float dt)
             dir.x /= length;
             dir.y /= length;
 
+            int damage = 1;
+
+            if (dynamic_cast<MouseWeapon*>(currentWeapon.get()))
+            {
+                damage = 3;
+            }
+
             projectiles.push_back(
                 std::make_unique<Projectile>(
                     player->GetPosition(),
-                    dir
+                    dir,
+                    damage
                 )
             );
         }
@@ -137,7 +168,7 @@ void GameManager::Update(float dt)
 
             if (distance < enemy->GetRadius() + projectile->GetRadius())
             {
-                enemy->Destroy();
+                enemy->TakeDamage(projectile->GetDamage());
                 projectile->Destroy();
             }
         }
@@ -184,4 +215,6 @@ void GameManager::Draw()
 
     DrawText(TextFormat("HP: %d", player->GetHP()), 20, 20, 20, WHITE);
     DrawText(TextFormat("Time: %.0f", gameTime), 20, 50, 20, WHITE);
+    DrawText(TextFormat("Enemies: %i", enemies.size()), 20, 80, 20, WHITE);
+    DrawText("TAB = Switch Weapon", 20, 110, 20, WHITE);
 }
