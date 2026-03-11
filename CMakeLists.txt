@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 3.21)
 
-project(VampireSurvivorsCloneCMake)
+project(VampireSurvivorsClone)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -11,11 +11,9 @@ file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
     src/*.cpp
 )
 
-add_executable(${PROJECT_NAME} ${SOURCES})
-
+add_executable(VampireSurvivorsClone ${SOURCES} "include/Projectile.h" "src/Projectile.cpp" "include/Weapon.h" "include/DirectionWeapon.h" "include/MouseWeapon.h" "src/DirectionWeapon.cpp" "src/MouseWeapon.cpp")
 
 target_include_directories(${PROJECT_NAME} PRIVATE include)
-
 
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
 
