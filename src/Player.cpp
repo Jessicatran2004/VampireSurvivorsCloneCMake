@@ -25,7 +25,7 @@ void Player::Update(float dt)
         direction.x /= length;
         direction.y /= length;
 
-        lastMoveDirection = direction;   // ?? viktigt
+        lastMoveDirection = direction;  
 
         position.x += direction.x * speed * dt;
         position.y += direction.y * speed * dt;
@@ -34,7 +34,7 @@ void Player::Update(float dt)
 
 void Player::Draw() const
 {
-    DrawCircleV(position, radius, WHITE);
+    DrawCircleV(position, radius, Color{ 245,255,98,255 });
 }
 
 Vector2 Player::GetPosition() const
@@ -55,4 +55,19 @@ void Player::TakeDamage(int amount)
 Vector2 Player::GetLastMoveDirection() const
 {
     return lastMoveDirection;
+}
+void Player::AddXP(int amount)
+{
+    xp += amount;
+
+    if (xp >= level * 10)
+    {
+        xp = 0;
+        level++;
+    }
+}
+
+int Player::GetLevel() const
+{
+    return level;
 }

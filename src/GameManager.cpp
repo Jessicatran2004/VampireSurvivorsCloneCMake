@@ -40,8 +40,21 @@ void GameManager::Update(float dt)
     gameTime += dt;
     spawnTimer += dt;
     attackTimer += dt;
+    waveTimer += dt;
 
     player->Update(dt);
+
+    if (waveTimer >= waveDuration)
+    {
+        waveTimer = 0.0f;
+        wave++;
+
+        enemiesPerSpawn++;
+        spawnInterval -= 0.2f;
+
+        if (spawnInterval < 0.5f)
+            spawnInterval = 0.5f;
+    }
 
     // =============================
     // Endless Enemy Spawn
@@ -79,6 +92,15 @@ void GameManager::Update(float dt)
         enemies.push_back(
             std::make_unique<FastEnemy>(x, y)
         );
+        if ((int)gameTime % 60 == 0)
+        {
+            enemies.push_back(
+                std::make_unique<BossEnemy>(
+                    screenWidth / 2,
+                    0
+                )
+            );
+        }
     }
 
     // =============================
@@ -102,6 +124,7 @@ void GameManager::Update(float dt)
         Vector2 dir = currentWeapon->GetFireDirection(
             player->GetPosition(),
             player->GetLastMoveDirection()
+          
         );
 
         float length = sqrt(dir.x * dir.x + dir.y * dir.y);
@@ -153,6 +176,19 @@ void GameManager::Update(float dt)
     {
         projectile->Update(dt);
     }
+    for (auto& orb : orbs)
+    {
+        float dx = orb->GetPosition().x - player->GetPosition().x;
+        float dy = orb->GetPosition().y - player->GetPosition().y;
+
+        float dist = sqrt(dx * dx + dy * dy);
+
+        if (dist < orb->GetRadius() + 20)
+        {
+            player->AddXP(1);
+            orb->Collect();
+        }
+    }
 
     // =============================
     // Projectile -> Enemy Collision
@@ -170,6 +206,15 @@ void GameManager::Update(float dt)
             {
                 enemy->TakeDamage(projectile->GetDamage());
                 projectile->Destroy();
+
+                if (!enemy->IsAlive())
+                {
+                    orbs.push_back(
+                        std::make_unique<ExperienceOrb>(
+                            enemy->GetPosition()
+                        )
+                    );
+                }
             }
         }
     }
@@ -212,9 +257,15 @@ void GameManager::Draw()
     {
         projectile->Draw();
     }
+    for (const auto& orb : orbs)
+    {
+        orb->Draw();
+    }
 
     DrawText(TextFormat("HP: %d", player->GetHP()), 20, 20, 20, WHITE);
     DrawText(TextFormat("Time: %.0f", gameTime), 20, 50, 20, WHITE);
     DrawText(TextFormat("Enemies: %i", enemies.size()), 20, 80, 20, WHITE);
     DrawText("TAB = Switch Weapon", 20, 110, 20, WHITE);
+    DrawText(TextFormat("Wave: %i", wave), 20, 140, 20, WHITE);
+    DrawText(TextFormat("Level: %i", player->GetLevel()), 20, 170, 20, WHITE);
 }

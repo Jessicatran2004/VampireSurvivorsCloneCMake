@@ -32,7 +32,7 @@ void Enemy::Update(float dt, const Vector2& playerPos)
 
 void Enemy::Draw() const
 {
-    DrawCircleV(position, 15, RED);
+    DrawCircleV(position, 15, BLACK);
 }
 
 // FastEnemy
@@ -44,7 +44,9 @@ FastEnemy::FastEnemy(float x, float y)
 
 void FastEnemy::Draw() const
 {
-    DrawCircleV(position, 15, ORANGE);
+    DrawCircleV(position, radius + 6, Color{ 100, 200, 255, 80 });
+    DrawCircleV(position, radius + 3, Color{ 100, 200, 255, 150 });
+    DrawCircleV(position, radius, Color{ 120, 220, 255, 255 });
 }
 
 // TankEnemy
@@ -86,4 +88,16 @@ void Enemy::TakeDamage(int damage)
     {
         alive = false;
     }
+}
+
+BossEnemy::BossEnemy(float x, float y)
+    : Enemy(x, y, 40.0f)
+{
+    radius = 40;
+    health = 20;
+}
+
+void BossEnemy::Draw() const
+{
+    DrawCircleV(position, 40, DARKPURPLE);
 }

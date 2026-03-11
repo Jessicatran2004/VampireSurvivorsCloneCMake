@@ -15,7 +15,7 @@ void Projectile::Update(float dt)
 
 void Projectile::Draw() const
 {
-    DrawCircleV(position, radius, YELLOW);
+    DrawCircleV(position, radius, Color{250, 150, 185, 255});
 }
 
 Vector2 Projectile::GetPosition() const

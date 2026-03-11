@@ -11,7 +11,7 @@ file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
     src/*.cpp
 )
 
-add_executable(VampireSurvivorsClone ${SOURCES} "include/Projectile.h" "src/Projectile.cpp" "include/Weapon.h" "include/DirectionWeapon.h" "include/MouseWeapon.h" "src/DirectionWeapon.cpp" "src/MouseWeapon.cpp")
+add_executable(VampireSurvivorsClone ${SOURCES} "include/Projectile.h" "src/Projectile.cpp" "include/Weapon.h" "include/DirectionWeapon.h" "include/MouseWeapon.h" "src/DirectionWeapon.cpp" "src/MouseWeapon.cpp" "include/ExperienceOrb.h" "src/ExperienceOrb.cpp")
 
 target_include_directories(${PROJECT_NAME} PRIVATE include)
 

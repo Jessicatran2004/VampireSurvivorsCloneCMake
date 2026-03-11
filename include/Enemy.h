@@ -40,3 +40,10 @@ public:
     void Draw() const override;
 
 };
+
+class BossEnemy : public Enemy
+{
+public:
+    BossEnemy(float x, float y);
+    void Draw() const override;
+};
