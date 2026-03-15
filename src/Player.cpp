@@ -11,6 +11,10 @@ Player::Player(float x, float y)
 
 void Player::Update(float dt)
 {
+    if (damageTimer > 0)
+    {
+        damageTimer -= dt;
+    }
     Vector2 direction = { 0, 0 };
 
     if (IsKeyDown(KEY_W)) direction.y -= 1;
@@ -49,8 +53,15 @@ int Player::GetHP() const
 
 void Player::TakeDamage(int amount)
 {
+    if (damageTimer > 0)
+        return;
+
     hp -= amount;
-    if (hp < 0) hp = 0;
+
+    if (hp < 0)
+        hp = 0;
+
+    damageTimer = damageCooldown;
 }
 Vector2 Player::GetLastMoveDirection() const
 {

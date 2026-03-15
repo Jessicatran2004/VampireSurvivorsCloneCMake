@@ -17,13 +17,18 @@ public:
 
     void AddXP(int amount);
     int GetLevel() const;
+
 private:
     Vector2 position;
     float speed;
     int hp;
     float radius;
+
     int xp = 0;
     int level = 1;
 
     Vector2 lastMoveDirection = { 1, 0 };
+
+    float damageCooldown = 0.5f;
+    float damageTimer = 0.0f;
 };

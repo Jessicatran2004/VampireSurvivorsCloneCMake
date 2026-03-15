@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:include\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\DamageNumber.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:include\\DamageNumber.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -57,14 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\Particle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:include\\Particle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:include\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\DirectionWeapon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -130,7 +130,46 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DamageNumber.h",
+              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\DamageNumber.h",
+              "RelativeDocumentMoniker": "include\\DamageNumber.h",
+              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\DamageNumber.h",
+              "RelativeToolTip": "include\\DamageNumber.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-15T10:10:11.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\Player.h",
+              "RelativeDocumentMoniker": "include\\Player.h",
+              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\Player.h",
+              "RelativeToolTip": "include\\Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-25T13:00:52.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\Player.cpp",
+              "RelativeDocumentMoniker": "src\\Player.cpp",
+              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\Player.cpp",
+              "RelativeToolTip": "src\\Player.cpp",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-05T09:40:43.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Enemy.h",
               "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\Enemy.h",
               "RelativeDocumentMoniker": "include\\Enemy.h",
@@ -143,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Enemy.cpp",
               "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\Enemy.cpp",
               "RelativeDocumentMoniker": "src\\Enemy.cpp",
@@ -156,20 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DamageNumber.h",
-              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\DamageNumber.h",
-              "RelativeDocumentMoniker": "include\\DamageNumber.h",
-              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\DamageNumber.h",
-              "RelativeToolTip": "include\\DamageNumber.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-15T10:10:11.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "GameManager.cpp",
               "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\GameManager.cpp",
               "RelativeDocumentMoniker": "src\\GameManager.cpp",
@@ -182,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "GameManager.h",
               "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\GameManager.h",
               "RelativeDocumentMoniker": "include\\GameManager.h",
@@ -195,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "DamageNumber.cpp",
               "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\DamageNumber.cpp",
               "RelativeDocumentMoniker": "src\\DamageNumber.cpp",
@@ -208,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\main.cpp",
               "RelativeDocumentMoniker": "src\\main.cpp",
@@ -221,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Weapon.cpp",
               "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\Weapon.cpp",
               "RelativeDocumentMoniker": "src\\Weapon.cpp",
@@ -234,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ExperienceOrb.cpp",
               "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\ExperienceOrb.cpp",
               "RelativeDocumentMoniker": "src\\ExperienceOrb.cpp",
@@ -247,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "MouseWeapon.h",
               "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\MouseWeapon.h",
               "RelativeDocumentMoniker": "include\\MouseWeapon.h",
@@ -260,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "ExperienceOrb.h",
               "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\ExperienceOrb.h",
               "RelativeDocumentMoniker": "include\\ExperienceOrb.h",
@@ -273,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Projectile.cpp",
               "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\Projectile.cpp",
               "RelativeDocumentMoniker": "src\\Projectile.cpp",
@@ -286,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Particle.cpp",
               "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\Particle.cpp",
               "RelativeDocumentMoniker": "src\\Particle.cpp",
@@ -299,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Particle.h",
               "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\Particle.h",
               "RelativeDocumentMoniker": "include\\Particle.h",
@@ -308,32 +334,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-03-15T09:06:52.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Player.cpp",
-              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\Player.cpp",
-              "RelativeDocumentMoniker": "src\\Player.cpp",
-              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\src\\Player.cpp",
-              "RelativeToolTip": "src\\Player.cpp",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-05T09:40:43.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Player.h",
-              "DocumentMoniker": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\Player.h",
-              "RelativeDocumentMoniker": "include\\Player.h",
-              "ToolTip": "C:\\Users\\Jessica Tran\\Documents\\skola\\VampireSurvivorsCloneCMake\\include\\Player.h",
-              "RelativeToolTip": "include\\Player.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-02-25T13:00:52.929Z",
               "EditorCaption": ""
             },
             {
