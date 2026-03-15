@@ -1,4 +1,5 @@
 #include "ExperienceOrb.h"
+#include <math.h>
 
 ExperienceOrb::ExperienceOrb(Vector2 pos)
 {
@@ -11,7 +12,9 @@ void ExperienceOrb::Update(float dt)
 
 void ExperienceOrb::Draw() const
 {
-    DrawCircleV(position, radius + 3, Color{ 255,105,180,100 });
+    float pulse = sin(GetTime() * 5) * 3;
+
+    DrawCircleV(position, radius + pulse, Color{ 255,100,200,120 });
     DrawCircleV(position, radius, PINK);
 }
 

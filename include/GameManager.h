@@ -6,7 +6,14 @@
 #include "Projectile.h"
 #include "Weapon.h"
 #include "ExperienceOrb.h"
+#include "Particle.h"
+#include "DamageNumber.h"
 
+enum class GameState
+{
+    Menu,
+    Playing
+};
 
 class GameManager
 {
@@ -18,6 +25,7 @@ public:
     void Draw();
 
 private:
+    GameState gameState = GameState::Menu;
     GameManager() = default;
 
     Player* player = nullptr;
@@ -25,6 +33,12 @@ private:
     std::vector<std::unique_ptr<Projectile>> projectiles;
     std::vector<std::unique_ptr<ExperienceOrb>> orbs;
 
+    std::unique_ptr<Weapon> currentWeapon;  // Strategy pattern
+    std::vector<std::unique_ptr<Particle>> particles;
+    std::vector<std::unique_ptr<DamageNumber>> damageNumbers;
+
+
+    Rectangle startButton = { 0,0,200,50 };
     float attackTimer = 0.0f;
     float attackCooldown = 1.0f;
 
@@ -43,6 +57,6 @@ private:
     float waveDuration = 20.0f;
 
 
-    std::unique_ptr<Weapon> currentWeapon;  // Strategy pattern
+
 };
 

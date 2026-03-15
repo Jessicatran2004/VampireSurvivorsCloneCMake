@@ -8,11 +8,19 @@ Enemy::Enemy(float x, float y, float s)
 {
     position = { x, y };
     speed = s;
-	radius = 15.0f;
+    radius = 15.0f;
+
+    maxHp = 5;
+    hp = maxHp;
+
 }
 
 void Enemy::Update(float dt, const Vector2& playerPos)
 {
+    if (hitFlashTimer > 0)
+    {
+        hitFlashTimer -= dt;
+    }
     Vector2 direction;
     direction.x = playerPos.x - position.x;
     direction.y = playerPos.y - position.y;
@@ -32,34 +40,76 @@ void Enemy::Update(float dt, const Vector2& playerPos)
 
 void Enemy::Draw() const
 {
-    DrawCircleV(position, 15, BLACK);
+    DrawCircleLines(position.x, position.y, radius + 2, BLACK);
+    Color enemyColor = RED;
+
+    if (hitFlashTimer > 0)
+    {
+        enemyColor = WHITE;
+    }
+
+    DrawCircleV(position, radius, enemyColor);
+    float barWidth = radius * 2;
+    float barHeight = 4;
+
+    float healthPercent = (float)hp / maxHp;
+
+    Vector2 barPos =
+    {
+        position.x - barWidth / 2,
+        position.y - radius - 10
+    };
+
+    DrawRectangle(barPos.x, barPos.y, barWidth, barHeight, DARKGRAY);
+
+    DrawRectangle(
+        barPos.x,
+        barPos.y,
+        barWidth * healthPercent,
+        barHeight,
+        LIME
+    );
 }
+
 
 // FastEnemy
 FastEnemy::FastEnemy(float x, float y)
-    : Enemy(x, y, 150.0f) 
+    : Enemy(x, y, 150.0f)
 {
-    health = 2;
+    maxHp = 2;
+    hp = maxHp;
 }
 
 void FastEnemy::Draw() const
 {
+    Color c = Color{ 120,220,255,255 };
+
+    if (hitFlashTimer > 0)
+        c = WHITE;
+  
+   
     DrawCircleV(position, radius + 6, Color{ 100, 200, 255, 80 });
     DrawCircleV(position, radius + 3, Color{ 100, 200, 255, 150 });
     DrawCircleV(position, radius, Color{ 120, 220, 255, 255 });
+
+    DrawHealthBar();
 }
 
 // TankEnemy
 TankEnemy::TankEnemy(float x, float y)
-    : Enemy(x, y, 50.0f) 
+    : Enemy(x, y, 50.0f)
 {
     radius = 25.0f;
-    health = 5;
+
+    maxHp = 20;
+    hp = maxHp;
 }
 
 void TankEnemy::Draw() const
 {
-    DrawCircleV(position, 25, PURPLE);
+    if (hitFlashTimer > 0)
+    DrawCircleV(position, 25, YELLOW);
+    DrawHealthBar();
 }
 Vector2 Enemy::GetPosition() const
 {
@@ -82,9 +132,11 @@ void Enemy::Destroy()
 
 void Enemy::TakeDamage(int damage)
 {
-    health -= damage;
+    hp -= damage;
 
-    if (health <= 0)
+    hitFlashTimer = hitFlashDuration;
+
+    if (hp <= 0)
     {
         alive = false;
     }
@@ -94,10 +146,36 @@ BossEnemy::BossEnemy(float x, float y)
     : Enemy(x, y, 40.0f)
 {
     radius = 40;
-    health = 20;
+
+    maxHp = 50;
+    hp = maxHp;
 }
 
 void BossEnemy::Draw() const
 {
-    DrawCircleV(position, 40, DARKPURPLE);
+    DrawCircleV(position, 40, DARKGREEN);
+    DrawHealthBar();
+}
+void Enemy::DrawHealthBar() const
+{
+    float barWidth = radius * 2;
+    float barHeight = 4;
+
+    float healthPercent = (float)hp / maxHp;
+
+    Vector2 barPos =
+    {
+        position.x - barWidth / 2,
+        position.y - radius - 10
+    };
+
+    DrawRectangle(barPos.x, barPos.y, barWidth, barHeight, DARKGRAY);
+
+    DrawRectangle(
+        barPos.x,
+        barPos.y,
+        barWidth * healthPercent,
+        barHeight,
+        LIME
+    );
 }

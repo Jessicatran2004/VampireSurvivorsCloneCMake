@@ -16,13 +16,20 @@ public:
     bool IsAlive() const;
     void Destroy();
     void TakeDamage(int damage);
+    void DrawHealthBar() const;
+   
 
 protected:
     Vector2 position;
     float speed;
     float radius;
 
-    int health = 1;
+    int hp;
+    int maxHp;
+
+    float hitFlashTimer = 0.0f;
+    float hitFlashDuration = 0.1f;
+
     bool alive = true;
 };
 

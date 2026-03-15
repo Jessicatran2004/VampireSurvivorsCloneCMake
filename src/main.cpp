@@ -18,7 +18,7 @@ int main()
         GameManager::GetInstance().Update(dt);
 
         BeginDrawing();
-        ClearBackground(DARKBLUE);
+        ClearBackground(DARKPURPLE);
 
         GameManager::GetInstance().Draw();
 

@@ -4,6 +4,7 @@
 #include <cmath>
 #include <algorithm>
 
+
 GameManager& GameManager::GetInstance()
 {
     static GameManager instance;
@@ -17,6 +18,7 @@ void GameManager::Init(int width, int height)
 
     player = new Player(400, 300);
 
+
     // Start enemies
     for (int i = 0; i < 5; i++)
     {
@@ -28,15 +30,36 @@ void GameManager::Init(int width, int height)
         );
     }
 
+
     gameTime = 0.0f;
     spawnTimer = 0.0f;
     attackTimer = 0.0f;
 
-    currentWeapon = std::move(std::make_unique<DirectionWeapon>());
+    currentWeapon = std::make_unique<DirectionWeapon>();
 }
 
 void GameManager::Update(float dt)
 {
+    // MENU
+    if (gameState == GameState::Menu)
+    {
+        Vector2 mouse = GetMousePosition();
+
+        if (CheckCollisionPointRec(mouse, startButton) &&
+            IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
+        {
+            gameState = GameState::Playing;
+        }
+
+        if (IsKeyPressed(KEY_ENTER))
+        {
+            gameState = GameState::Playing;
+        }
+
+        return;
+    }
+
+    // GAME
     gameTime += dt;
     spawnTimer += dt;
     attackTimer += dt;
@@ -92,8 +115,14 @@ void GameManager::Update(float dt)
         enemies.push_back(
             std::make_unique<FastEnemy>(x, y)
         );
-        if ((int)gameTime % 60 == 0)
+        static int lastBossMinute = -1;
+
+        int minute = (int)(gameTime / 60);
+
+        if (minute > lastBossMinute)
         {
+            lastBossMinute = minute;
+
             enemies.push_back(
                 std::make_unique<BossEnemy>(
                     screenWidth / 2,
@@ -206,6 +235,12 @@ void GameManager::Update(float dt)
             {
                 enemy->TakeDamage(projectile->GetDamage());
                 projectile->Destroy();
+                damageNumbers.push_back(
+                    std::make_unique<DamageNumber>(
+                        enemy->GetPosition(),
+                        projectile->GetDamage()
+                    )
+                );
 
                 if (!enemy->IsAlive())
                 {
@@ -214,10 +249,32 @@ void GameManager::Update(float dt)
                             enemy->GetPosition()
                         )
                     );
+
+                    for (int i = 0; i < 10; i++)
+                    {
+                        particles.push_back(
+                            std::make_unique<Particle>(
+                                enemy->GetPosition()
+                            )
+                        );
+                    }
                 }
             }
         }
     }
+    for (auto& p : particles)
+    {
+        p->Update(dt);
+    }
+
+    particles.erase(
+        std::remove_if(particles.begin(), particles.end(),
+            [](const std::unique_ptr<Particle>& p)
+            {
+                return !p->IsAlive();
+            }),
+        particles.end()
+    );
 
     // =============================
     // Remove Dead Enemies
@@ -242,10 +299,46 @@ void GameManager::Update(float dt)
             }),
         projectiles.end()
     );
+    for (auto& dmg : damageNumbers)
+{
+    dmg->Update(dt);
+}
+    damageNumbers.erase(
+        std::remove_if(
+            damageNumbers.begin(),
+            damageNumbers.end(),
+            [](const std::unique_ptr<DamageNumber>& d)
+            {
+                return !d->IsAlive();
+            }),
+        damageNumbers.end()
+    );
+
 }
 
 void GameManager::Draw()
 {
+    for (int x = 0; x < screenWidth; x += 40)
+    {
+        DrawLine(x, 0, x, screenHeight, Color{ 40,40,60,255 });
+    }
+
+    for (int y = 0; y < screenHeight; y += 40)
+    {
+        DrawLine(0, y, screenWidth, y, Color{ 40,40,60,255 });
+    }
+   if (gameState == GameState::Menu)
+   {
+    ClearBackground(BLACK);
+    DrawRectangle(10, 10, 180, 170, Color{ 0,0,0,120 });
+    DrawText("VAMPIRE SURVIVOR", 180, 200, 40, SKYBLUE);
+    DrawText("Press ENTER to start", 260, 260, 20, WHITE);
+    DrawText("WASD = Move", 260, 320, 20, WHITE);
+    DrawText("TAB = Switch Weapon", 260, 350, 20, WHITE);
+    DrawText("Press ESC to quit", 260, 380, 20, GRAY);
+    return;
+    }
+
     player->Draw();
 
     for (const auto& enemy : enemies)
@@ -256,10 +349,20 @@ void GameManager::Draw()
     for (const auto& projectile : projectiles)
     {
         projectile->Draw();
+
     }
+    for (const auto& p : particles)
+    {
+        p->Draw();
+    }
+
     for (const auto& orb : orbs)
     {
         orb->Draw();
+    }
+    for (const auto& dmg : damageNumbers)
+    {
+        dmg->Draw();
     }
 
     DrawText(TextFormat("HP: %d", player->GetHP()), 20, 20, 20, WHITE);
